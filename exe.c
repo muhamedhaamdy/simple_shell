@@ -7,11 +7,13 @@
  */
 void exe(char **av, char *path)
 {
+	int ac;
+	
 	if (execve(path, av, __environ) == -1)
 	{
 		perror("error: failed to execute command\n");
 		free(path);
-		for (int ac = 0; av[ac]; ac++)
+		for (ac = 0; av[ac]; ac++)
 			free(av[ac]);
 		free(av);
 		exit(127);
