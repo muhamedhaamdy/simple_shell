@@ -70,7 +70,7 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strcat(char *dest, char *src)
 {
-	// char *i = dest, *j = src;
+	/* char *i = dest, *j = src;
 
 	// while (*i != '\0')
 	// 	i++;
@@ -80,8 +80,7 @@ char *_strcat(char *dest, char *src)
 	// 	i++;
 	// 	j++;
 	// }
-	// return (dest);
-
+	// return (dest);*/
 	int i, j;
 
 	i = 0;
