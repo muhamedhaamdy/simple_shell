@@ -67,7 +67,7 @@ int preprocess(char **commcpy)
 	tkn  = strtok(command, " ");
 	while (builtin[i].str != NULL)
 	{
-		if (tkn && !strcmp(tkn, builtin[i].str))
+		if (tkn && !_strcmp(tkn, builtin[i].str))
 		{
 			tkn = strtok(NULL, " ");
 			free(command);
