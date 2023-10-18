@@ -34,6 +34,7 @@ char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *a, char *b);
 char *_getenv();
+ssize_t _getline(char **buff, size_t *buffsize);
 char **array_of_token(char *comm, int token_num);
 char *check_path(char *command);
 char *get_path(char *command);

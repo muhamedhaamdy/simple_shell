@@ -48,7 +48,7 @@ int preprocess(char **commcpy)
 	char *command = NULL, *tkn, *another_cpy;
 	int len, i = 0;
 
-	read = getline(&command, &letters, stdin);
+	read = _getline(&command, &letters);
 	check_EOF(read, command);
 	len = _strlen(command);
 	command[len - 1] = '\0';
