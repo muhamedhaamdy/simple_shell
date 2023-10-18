@@ -8,7 +8,7 @@
 void exe(char **av, char *path)
 {
 	int ac;
-	
+
 	if (execve(path, av, __environ) == -1)
 	{
 		_puts("./hsh");

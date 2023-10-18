@@ -52,9 +52,7 @@ char *get_path(char *command)
 		comm_path = malloc(_strlen(tkn) + _strlen(command) + 2);
 		if (!comm_path)
 		{
-			free(pathcpy);
-			free(tkn);
-			free(comm_path);
+			free(pathcpy), free(tkn), free(comm_path);
 			return (NULL);
 		}
 		_strcpy(comm_path, tkn);
@@ -69,7 +67,6 @@ char *get_path(char *command)
 		tkn = strtok(NULL, ":");
 		free(comm_path);
 	}
-	
 	free(pathcpy);
 	free(tkn);
 	return (NULL);
