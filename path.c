@@ -62,7 +62,6 @@ char *get_path(char *command)
 		_strcpy(comm_path, tkn);
 		_strcat(comm_path, "/");
 		_strcat(comm_path, command);
-		printf("command %s\n",command);
 		_strcat(comm_path, "\0");
 
 		if (!stat(comm_path, &buff))
