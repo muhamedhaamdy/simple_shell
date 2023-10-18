@@ -20,6 +20,21 @@ int number_fo_tokns(char *commcpy)
 	return (token_num);
 }
 /**
+ * check_EOF - check for end of file condition
+ *
+ * @n : the size of line
+ * @command : the string that should be freed
+*/
+void check_EOF(ssize_t n, char *command)
+{
+	if (n == -1)
+	{
+		free(command);
+		exit(0);
+	}
+}
+
+/**
  * preprocess - this function returns the number of tokens in a string
  *
  * @commcpy: the string to be tokenized
@@ -34,11 +49,7 @@ int preprocess(char **commcpy)
 	int len, i = 0;
 
 	read = getline(&command, &letters, stdin);
-	if (read == -1)
-	{
-		free(command);
-		exit(0);
-	}
+	check_EOF(read, command);
 	len = _strlen(command);
 	command[len - 1] = '\0';
 	*commcpy = malloc(sizeof(char) * len);

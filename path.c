@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * get_path - this function returns the path of a command
+ * check_path - this function check the path of a command
  *
  * @command: the command to be searched
  * Return: the path of the command

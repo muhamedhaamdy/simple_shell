@@ -9,7 +9,7 @@ void exe(char **av, char *path)
 {
 	if (execve(path, av, __environ) == -1)
 	{
-        perror("error: failed to execute command\n");
+		perror("error: failed to execute command\n");
 		free(path);
 		for (int ac = 0; av[ac]; ac++)
 			free(av[ac]);
