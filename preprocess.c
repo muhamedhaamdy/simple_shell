@@ -72,6 +72,7 @@ int preprocess(char **commcpy)
 			tkn = strtok(NULL, " ");
 			free(command);
 			free(another_cpy);
+			free(*commcpy);
 			builtin[i].func(tkn);
 			free(tkn);
 			return (0);
