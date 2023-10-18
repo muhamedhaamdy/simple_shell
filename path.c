@@ -45,7 +45,7 @@ char *get_path(char *command)
 		free(pathcpy);
 		return (NULL);
 	}
-	strcpy(pathcpy, path);
+	_strcpy(pathcpy, path);
 	tkn = strtok(pathcpy, ":");
 	while (tkn)
 	{
@@ -57,9 +57,10 @@ char *get_path(char *command)
 			free(comm_path);
 			return (NULL);
 		}
-		strcpy(comm_path, tkn);
-		strcat(comm_path, "/");
-		strcat(comm_path, command);
+		_strcpy(comm_path, tkn);
+		_strcat(comm_path, "/");
+		_strcat(comm_path, command);
+		_strcat(comm_path, "\0");
 		if (!stat(comm_path, &buff))
 		{
 			free(pathcpy);

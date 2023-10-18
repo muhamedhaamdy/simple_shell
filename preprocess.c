@@ -62,8 +62,8 @@ int preprocess(char **commcpy)
 		free(another_cpy);
 		exit(0);
 	}
-	strcpy(*commcpy, command);
-	strcpy(another_cpy, command);
+	_strcpy(*commcpy, command);
+	_strcpy(another_cpy, command);
 	tkn  = strtok(command, " ");
 	while (builtin[i].str != NULL)
 	{
