@@ -31,6 +31,7 @@ char *check_path(char *command)
  */
 char *get_path(char *command)
 {
+	//test
 	char *path, *pathcpy, *tkn, *comm_path = check_path(command);
 	struct stat buff;
 
