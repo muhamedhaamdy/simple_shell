@@ -60,9 +60,7 @@ char *get_path(char *command)
 			return (NULL);
 		}
 		_strcpy(comm_path, tkn);
-		printf("comm path after coping tkn %s\n",comm_path);
 		_strcat(comm_path, "/");
-		printf("comm path after adding / %s\n",comm_path);
 		_strcat(comm_path, command);
 		printf("command %s\n",command);
 		printf("comm path after adding command %s\n",comm_path);

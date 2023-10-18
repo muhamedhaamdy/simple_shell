@@ -70,16 +70,29 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strcat(char *dest, char *src)
 {
-	char *i = dest, *j = src;
+	// char *i = dest, *j = src;
 
-	while (*i != '\0')
-		i++;
-	while (*j != '\0')
+	// while (*i != '\0')
+	// 	i++;
+	// while (*j != '\0')
+	// {
+	// 	*i = *j;
+	// 	i++;
+	// 	j++;
+	// }
+	// return (dest);
+
+	int i, j;
+
+	i = 0;
+	for (j = 0; dest[j] != '\0'; j++)
+		;
+	while (src[i] != '\0')
 	{
-		*i = *j;
+		dest[j + i] = src[i];
 		i++;
-		j++;
 	}
+	dest[j + i] = '\0';
 	return (dest);
 }
 
