@@ -69,6 +69,7 @@ char *get_path(char *command)
 		tkn = strtok(NULL, ":");
 		free(comm_path);
 	}
+	
 	free(pathcpy);
 	free(tkn);
 	return (NULL);
