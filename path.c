@@ -31,7 +31,6 @@ char *check_path(char *command)
  */
 char *get_path(char *command)
 {
-	//test
 	char *path, *pathcpy, *tkn, *comm_path = check_path(command);
 	struct stat buff;
 
@@ -39,7 +38,9 @@ char *get_path(char *command)
 		return (comm_path);
 	free(comm_path);
 	path = _getenv();
-	pathcpy = malloc(sizeof(char) * 101);
+	printf("got env\n");
+	pathcpy = malloc(sizeof(char) * 1000);
+	printf("allocated space for path copy\n");
 	if (!pathcpy)
 	{
 		free(path);
@@ -59,9 +60,14 @@ char *get_path(char *command)
 			return (NULL);
 		}
 		_strcpy(comm_path, tkn);
+		printf("comm path after coping tkn %s\n",comm_path);
 		_strcat(comm_path, "/");
+		printf("comm path after adding / %s\n",comm_path);
 		_strcat(comm_path, command);
+		printf("command %s\n",command);
+		printf("comm path after adding command %s\n",comm_path);
 		_strcat(comm_path, "\0");
+
 		if (!stat(comm_path, &buff))
 		{
 			free(pathcpy);
