@@ -26,6 +26,12 @@ int main(int ac, char **av)
 		if (!av || !av[0])
 			continue;
 		command = get_path(av[0]);
+		if (!command)
+		{
+			fprintf(stderr, "./hsh: 1: %s: not found\n", av[0]);
+			free2DandCommand(av, command);
+			exit(127);
+		}
 		child_pid = fork();
 		if (child_pid == -1)
 			free2DandCommand(av, command);
