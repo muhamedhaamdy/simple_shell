@@ -38,9 +38,7 @@ char *get_path(char *command)
 		return (comm_path);
 	free(comm_path);
 	path = _getenv();
-	printf("got env\n");
 	pathcpy = malloc(sizeof(char) * 1000);
-	printf("allocated space for path copy\n");
 	if (!pathcpy)
 	{
 		free(path);
