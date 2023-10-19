@@ -17,10 +17,7 @@ int main(int ac, char **av)
 	{
 		token_num = preprocess(&command);
 		if (!token_num)
-		{
-			free(command);
 			continue;
-		}
 		av = array_of_token(command, token_num);
 		free(command);
 		if (!av || !av[0])
